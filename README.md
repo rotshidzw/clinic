@@ -5,6 +5,9 @@
 
 ![image](https://user-images.githubusercontent.com/69056906/190396881-346de6bb-c5ac-4628-a12f-f4e2c96acac4.png)
 
+![image](https://user-images.githubusercontent.com/69056906/190802897-d61dddd3-943a-4757-aa62-0d796f00e08b.png)
+
+
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
