@@ -1,7 +1,7 @@
 /* Populate database with sample data. */
 
 INSERT INTO animals
-    (name, date_of_birth, weight_kg, neutered, escape_attempts)
+    (name, date_of_birth, weight_kg, neutered, escape_attempt)
 VALUES
     ('Agumon', '2020-02-03', 10.23, TRUE, 0),
     ('Gabumon', '2018-11-15', 8, TRUE, 2),
