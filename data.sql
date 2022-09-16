@@ -9,8 +9,7 @@ VALUES
     ('Devimon', '2017-05-12', 11, TRUE, 5);
 
 /* second table*/
-INSERT INTO animals
-    (name, date_of_birth, weight_kg, neutered, escape_attempts)
+INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempt)
 VALUES
     (
         'Charmander', 
@@ -65,7 +64,36 @@ VALUES
 
 BEGIN;
 
-UPDATE animals
-SET species = 'unspecified';
+UPDATE animals SET species = 'unspecified';
 
 ROLLBACK;
+
+
+-- Update the species column to digimon and pokemon depending on the name's suffix
+BEGIN;
+
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+
+UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
+
+COMMIT;
+
+-- Delete all records and rollback
+BEGIN;
+
+DELETE FROM animals;
+
+ROLLBACK;
+
+-- Delete all animals born after Jan 1st, 2022 & update weight to be non-negative
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+
+SAVEPOINT delete_after_2022;
+
+UPDATE animals SET weight_kg = weight_kg * -1;
+
+ROLLBACK TO SAVEPOINT delete_after_2022;
+
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+
+COMMIT;
