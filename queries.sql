@@ -19,6 +19,52 @@ SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
 
               --## second one
 
+BEGIN;
+
+UPDATE animals SET species = 'unspecified';
+
+SELECT species from animals;
+
+ROLLBACK;
+
+SELECT species from animals;
+-- Update the species column to digimon and pokemon depending on the name's suffix
+BEGIN;
+
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+
+UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
+
+SELECT species from animals;
+
+COMMIT;
+
+SELECT species from animals;
+
+-- Delete all records and rollback
+BEGIN;
+
+DELETE FROM animals;
+
+ROLLBACK;
+
+SELECT COUNT(*) FROM ANIMALS;
+
+BEGIN;
+-- Delete all animals born after Jan 1st, 2022 & update weight to be non-negative
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+
+SAVEPOINT delete_after_2022;
+
+UPDATE animals SET weight_kg = weight_kg * -1;
+
+ROLLBACK TO SAVEPOINT delete_after_2022;
+
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+
+COMMIT;
+
+
 
 -- How many animals are there?
 SELECT COUNT(name) FROM animals;
