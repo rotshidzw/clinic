@@ -1,7 +1,13 @@
-# curriculum-databases-projects-template
+# Vet clinic database
+-relational database to create the data structure for a vet clinic
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+ a complete database with data about:
+
+- animals
+- animals' owners
+- clinic employees
+- visits
+
 
 ![image](https://user-images.githubusercontent.com/69056906/190870726-b733f153-3618-4f47-83ad-fb99ab1c9556.png)
 
