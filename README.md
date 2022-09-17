@@ -1,7 +1,20 @@
-# curriculum-databases-projects-template
+# Vet clinic database
+-relational database to create the data structure for a vet clinic
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+ a complete database with data about:
+
+- animals
+- animals' owners
+- clinic employees
+- visits
+
+
+![image](https://user-images.githubusercontent.com/69056906/190870726-b733f153-3618-4f47-83ad-fb99ab1c9556.png)
+
+
+![image](https://user-images.githubusercontent.com/69056906/190396881-346de6bb-c5ac-4628-a12f-f4e2c96acac4.png)
+
+![image](https://user-images.githubusercontent.com/69056906/190802897-d61dddd3-943a-4757-aa62-0d796f00e08b.png)
 
 
 ## Getting Started
@@ -15,17 +28,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **mavhungu rotshidzwa**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@rotshidzw](https://github.com/rotshidzw)
+- Twitter: [@rotshidzwamavh1](https://twitter.com/rotshidzwamavh1)
+- LinkedIn: [rotshidzwa mavhungu](https://www.linkedin.com/in/rochidzwa-chester-8062b6211/)
 
 ## 🤝 Contributing
 
