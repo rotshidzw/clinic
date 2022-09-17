@@ -61,43 +61,6 @@ VALUES
             4
     );
 
-
-BEGIN;
-
-UPDATE animals SET species = 'unspecified';
-
-ROLLBACK;
-
-
--- Update the species column to digimon and pokemon depending on the name's suffix
-BEGIN;
-
-UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
-
-UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
-
-COMMIT;
-
--- Delete all records and rollback
-BEGIN;
-
-DELETE FROM animals;
-
-ROLLBACK;
-
--- Delete all animals born after Jan 1st, 2022 & update weight to be non-negative
-DELETE FROM animals WHERE date_of_birth > '2022-01-01';
-
-SAVEPOINT delete_after_2022;
-
-UPDATE animals SET weight_kg = weight_kg * -1;
-
-ROLLBACK TO SAVEPOINT delete_after_2022;
-
-UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
-
-COMMIT;
- 
  --third
 INSERT INTO owners
     (full_name, age)
@@ -109,11 +72,19 @@ VALUES
     ('Dean Winchester', 14),
     ('Jodie Whittaker', 38);
 
+SELECT * from  owners;
+
 INSERT INTO species (name) VALUES ('pokemon'),  ('digimon');
+
+select * from species;
 
 UPDATE animals SET species_id = (SELECT id FROM species WHERE name = 'digimon') WHERE name LIKE '%mon';
 
+select * from species_id;
+
 UPDATE animals SET species_id = (SELECT id FROM species WHERE name = 'pokemon') WHERE species_id IS NULL;
+
+select * from species_id;
 
 UPDATE animals SET owner_id = (SELECT id FROM owners WHERE full_name = 'Sam Smith') WHERE name = 'Agumon';
 
