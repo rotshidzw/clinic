@@ -9,8 +9,6 @@
 - visits
 
 
-![image](https://user-images.githubusercontent.com/69056906/190870726-b733f153-3618-4f47-83ad-fb99ab1c9556.png)
-
 
 ![image](https://user-images.githubusercontent.com/69056906/190396881-346de6bb-c5ac-4628-a12f-f4e2c96acac4.png)
 
