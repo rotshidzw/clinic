@@ -1,5 +1,6 @@
 /* Database schema to keep the structure of entire database. */
 
+
 CREATE TABLE animals (
     id INTEGER primary key GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(250),
