@@ -1,5 +1,3 @@
-# curriculum-databases-projects-template
-
 # Vet clinic database
 -relational database to create the data structure for a vet clinic
 
